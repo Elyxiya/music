@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
+
     redirect: '/home',
   },
   // 主导航
@@ -96,7 +97,7 @@ const router = createRouter({
 // 路由守卫 - 登录验证
 router.beforeEach((to, from, next) => {
   const isLoggedIn = localStorage.getItem('token') // 或者你的登录状态检查
-
+  console.log('to:', to.name, 'from:', from.name, 'next:', next)
   // 需要登录的页面
   const authRequired = ['favorites', 'my-songs', 'liked-music']
 
@@ -110,8 +111,8 @@ router.beforeEach((to, from, next) => {
 })
 
 // 更新页面标题
-router.afterEach((to) => {
-  document.title = to.meta.title ? `${to.meta.title} - 音乐播放器` : '音乐播放器'
+router.afterEach((to: any) => {
+  document.title = to.meta.title ? `音乐播放器 - ${to.meta.title}` : '音乐播放器'
 })
 
 export default router

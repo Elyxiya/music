@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HomePage from './pages/index.vue'
+import MyLayout from './pages/MyLayout.vue'
 </script>
 
 <template>
   <div class="container">
-    <home-page />
+    <my-layout />
   </div>
 </template>
 
