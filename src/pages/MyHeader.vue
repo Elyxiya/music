@@ -1,7 +1,7 @@
 <template>
   <div class="header-box">
     <div class="logo">
-      <span>音乐播放器</span>
+      <span class="colorful-text">音乐播放器</span>
     </div>
     <div class="tool">
       <div class="search">
@@ -29,10 +29,20 @@
   height: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
+  background-color: #1d283a;
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
+    .colorful-text {
+      /* 设置背景渐变色，这里是从蓝色到粉色的水平渐变 */
+      background: linear-gradient(90deg, #6699ff, #ff66b3);
+      /* 让背景只裁剪到文字区域 */
+      -webkit-background-clip: text;
+      background-clip: text;
+      /* 文字颜色设为透明，这样背景渐变就能透过文字显示 */
+      -webkit-text-fill-color: transparent;
+    }
   }
   .tool {
     display: flex;
