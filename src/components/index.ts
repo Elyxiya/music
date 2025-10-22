@@ -1,5 +1,5 @@
 // 导入自定义组件
-import SvgIcon from './SvgIcon/index.vue'
+import SvgIcon from './icon/SvgIcon.vue'
 import type { App, Component } from 'vue'
 
 // 定义组件映射对象

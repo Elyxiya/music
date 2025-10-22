@@ -2,10 +2,22 @@
   <div class="menus">
     <div class="menu-main">
       <div class="title">主导航</div>
-      <router-link to="/home" class="menu-item">首页</router-link>
-      <router-link to="/found" class="menu-item">发现</router-link>
-      <router-link to="/star" class="menu-item">我的收藏</router-link>
-      <router-link to="/history" class="menu-item">播放历史</router-link>
+      <router-link to="/home" class="menu-item">
+        <svg-icon name="home" width="20px" height="20px" />
+        首页
+      </router-link>
+      <router-link to="/found" class="menu-item">
+        <svg-icon name="found" width="20px" height="20px" />
+        发现
+      </router-link>
+      <router-link to="/star" class="menu-item">
+        <svg-icon name="starOff" width="20px" height="20px" />
+        我的收藏
+      </router-link>
+      <router-link to="/history" class="menu-item">
+        <svg-icon name="historyOff" width="20px" height="20px" />
+        播放历史
+      </router-link>
     </div>
     <div class="menu-side">
       <div class="title">我的歌单</div>
@@ -17,7 +29,9 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// import SvgIcon from '../icon/SvgIcon.vue'
+</script>
 <style scoped lang="scss">
 .menus {
   flex: 0 0 15rem;
@@ -35,6 +49,9 @@
       color: #d2d1d1;
     }
     .menu-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       padding: 0.7rem 0.5rem;
       border-radius: 0.3rem;
       cursor: pointer;
